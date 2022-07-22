@@ -1,0 +1,6 @@
+.next
+**/*.js
+node_modules
+build
+/src/next-env.d.ts
+/src/next.config.js
