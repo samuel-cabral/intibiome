@@ -4,15 +4,11 @@ export function Header() {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
-        <div>
-          <img src="/images/logos/logo.png" alt="intibiome" />
-          <div
-            style={{
-              display: 'flex',
-              alignContent: 'flex-end',
-              background: 'gray',
-            }}
-          >
+        <div className={styles.headerTop}>
+          <div>
+            <img src="/images/logos/logo.png" alt="intibiome" />
+          </div>
+          <div className={styles.searchIconContainer}>
             <img src="/images/icons/search.svg" alt="Search Icon" />
           </div>
         </div>
