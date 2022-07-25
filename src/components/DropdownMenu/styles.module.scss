@@ -1,0 +1,45 @@
+.ddWrapper {
+
+}
+
+.ddHeader,
+.ddListItem {
+  background: 0;
+  border: 0;
+  color: var(--white);
+  font-weight: bold;
+}
+
+.ddHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    margin-left: 0.5rem;
+  }
+}
+
+.ddHeaderTitle {
+
+}
+
+.ddList {
+  background: var(--gray-700);
+  height: 3rem;
+  padding: 0 22rem;
+  margin-top: calc(3rem - 2.1rem);
+
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.ddListItem {
+  & + button {
+    margin-left: 3rem;
+  }
+}
