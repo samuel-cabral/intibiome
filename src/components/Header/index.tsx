@@ -1,6 +1,25 @@
+import { useState } from 'react';
+import { DropdownMenu } from '../DropdownMenu';
+
 import styles from './styles.module.scss';
 
 export function Header() {
+  const [aboutUs] = useState(['brand philosophy', 'product technology']);
+
+  const [ourProducts] = useState([
+    'all products',
+    'intibiome wellness',
+    'intibiome active',
+    'intibiome agecare',
+  ]);
+
+  const [intimateHealth] = useState([
+    'article 1',
+    'article 2',
+    'article 3',
+    'faq',
+  ]);
+
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
@@ -14,10 +33,10 @@ export function Header() {
         </div>
 
         <nav>
-          <a>about us</a>
-          <a>our products</a>
-          <a>intimate health</a>
-          <a>contact us</a>
+          <DropdownMenu title="about us" list={aboutUs} />
+          <DropdownMenu title="our products" list={ourProducts} />
+          <DropdownMenu title="our products" list={intimateHealth} />
+          <a href="/contact-us">contact us</a>
         </nav>
       </div>
     </header>
