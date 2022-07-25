@@ -91,7 +91,21 @@ const Home: NextPage = () => {
         </div>
       </main>
 
-      <footer />
+      <footer>
+        <div>
+          <a href="/contact-us">contact us</a>
+          <a href="/faq">faq</a>
+          <a href="/site-map">site map</a>
+          <a href="/privacy-policy">privacy policy</a>
+          <a href="/cookies-policy">cookies policy</a>
+          <a href="/legal-notice">legal notice</a>
+        </div>
+
+        <div>
+          <img src="/images/logos/ulabs.png" alt="Ulabs" />
+          <img src="/images/instagram_icon.png" alt="Instagram Icon" />
+        </div>
+      </footer>
     </>
   );
 };
