@@ -18,14 +18,13 @@ export function DropdownMenu({ title, list }: DropdownMenuProps) {
   };
 
   return (
-    <div className={styles.ddWrapper}>
-      <button
-        type="button"
-        className={styles.ddHeader}
-        onMouseOver={toggleList}
-        onMouseLeave={toggleList}
-        onFocus={toggleList}
-      >
+    <div
+      className={styles.ddWrapper}
+      onMouseOver={toggleList}
+      onMouseLeave={toggleList}
+      onFocus={toggleList}
+    >
+      <button type="button" className={styles.ddHeader}>
         <div className={styles.ddHeaderTitle}>{headerTitle}</div>
         {isListOpen ? (
           <FontAwesomeIcon icon={faAngleUp} size="1x" />
