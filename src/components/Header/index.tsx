@@ -1,5 +1,8 @@
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import { DropdownMenu } from '../DropdownMenu';
+import { Logo } from '../Logo';
 import { SearchBox } from '../SearchBox';
 
 import styles from './styles.module.scss';
@@ -25,16 +28,15 @@ export function Header() {
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
         <div className={styles.headerTop}>
-          <div>
-            <img src="/images/logos/logo.png" alt="intibiome" />
-          </div>
+          <FontAwesomeIcon icon={faBars} />
+          <Logo styles={styles} />
           <SearchBox />
         </div>
 
         <nav>
           <DropdownMenu title="about us" list={aboutUs} />
           <DropdownMenu title="our products" list={ourProducts} />
-          <DropdownMenu title="our products" list={intimateHealth} />
+          <DropdownMenu title="intimate health" list={intimateHealth} />
           <a href="/contact-us">contact us</a>
         </nav>
       </div>
