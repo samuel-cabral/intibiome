@@ -5,16 +5,16 @@
 }
 
 :root {
-  --white: #FFFFFF;
+  --white: #ffffff;
 
-  --blue-500: #389CD6;
+  --blue-500: #389cd6;
 
-  --gray-700: #7B7070;
+  --gray-700: #7b7070;
   --gray-100: #00000014;
 
-  --green-500: #309D5F;
+  --green-500: #309d5f;
 
-  --red-600: #EE6381;
+  --red-600: #ee6381;
 }
 
 @media (max-width: 1080px) {
@@ -23,7 +23,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   html {
     font-size: 87.5%;
   }
@@ -32,10 +32,19 @@
 body {
   background: var(--white);
   color: var(--gray-700);
+  overflow-x: hidden;
+
+  &.overflowHidden {
+    overflow: hidden;
+  }
 }
 
-body, input, textarea, select, button {
-  font: 400 1rem "Montserrat", sans-serif;
+body,
+input,
+textarea,
+select,
+button {
+  font: 400 1rem 'Montserrat', sans-serif;
 }
 
 button {

@@ -1,6 +1,11 @@
 /* eslint-disable react/function-component-definition */
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import classNames from 'classnames';
+import { BannerHero } from '../components/BannerHero';
+import { Card } from '../components/Card';
+
+import styles from './home.module.scss';
 
 const Home: NextPage = () => {
   return (
@@ -8,10 +13,17 @@ const Home: NextPage = () => {
       <Head>
         <title>Home | intibiome</title>
       </Head>
-      <main>
-        <img src="/images/banner_hero.png" alt="Banner showing the products" />
 
-        <section>
+      <main className={styles.contentContainer}>
+        <BannerHero
+          responsive
+          imagePaths={{
+            large: '/images/banners/banner_hero.png',
+            small: '/images/banners/banner-intibiome-02@2x.png',
+          }}
+        />
+
+        <section className={styles.section}>
           <h1>we’re here to help</h1>
 
           <p>
@@ -32,7 +44,7 @@ const Home: NextPage = () => {
           <img src="/images/icons/icons.png" alt="Icons" />
         </section>
 
-        <section>
+        <section className={styles.section}>
           <h1>
             whatever your age. whatever your lifestyle. whatever your interests
           </h1>
@@ -50,62 +62,60 @@ const Home: NextPage = () => {
           </p>
         </section>
 
-        <section>
+        <section className={classNames(styles.section, styles.products)}>
           <h1>our products</h1>
 
-          <div className="our-products-cards">
-            <div className="product-card">
+          <div className={styles.cardsWrapper}>
+            <Card title="wellness" bgTitleColor="blue">
               <img src="/images/cards/blue_mask.png" alt="Blue mask" />
-            </div>
-            <div className="product-card">
+              <p>intibiome wellness daily intimate wash</p>
+            </Card>
+            <Card title="active" bgTitleColor="green">
               <img src="/images/cards/green_mask.png" alt="Green mask" />
-            </div>
-            <div className="product-card">
+              <p>intibiome active extra protection intimate wash</p>
+            </Card>
+            <Card title="agecare" bgTitleColor="red">
               <img src="/images/cards/pink_mask.png" alt="Pink mask" />
-            </div>
+              <p>intibiome agecare dryness relief intimate wash</p>
+            </Card>
           </div>
         </section>
 
-        <img src="/images/masks.png" alt="" />
+        <BannerHero
+          responsive
+          imagePaths={{
+            small: 'images/banners/banner-intibiome-05@2x.png',
+            large: 'images/masks.png',
+          }}
+        />
 
-        <section>
+        <section className={styles.section}>
           <h1>keep up to date with our discoveries</h1>
 
-          <div>
-            <div>
+          <div className={styles.cardsWrapper}>
+            <Card>
               <img src="/images/fitness_woman.png" alt="Fitness Woman" />
-            </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </Card>
 
-            <div>
+            <Card>
               <img src="/images/old_woman.png" alt="Old woman" />
-            </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </Card>
 
-            <div>
+            <Card>
               <img src="/images/water.png" alt="Raindrops" />
-            </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </Card>
           </div>
         </section>
 
-        <div>
-          <button type="button">see more</button>
+        <div className={styles.seeMoreButtonContainer}>
+          <button type="button" className={styles.seeMoreButton}>
+            see more
+          </button>
         </div>
       </main>
-
-      <footer>
-        <div>
-          <a href="/contact-us">contact us</a>
-          <a href="/faq">faq</a>
-          <a href="/site-map">site map</a>
-          <a href="/privacy-policy">privacy policy</a>
-          <a href="/cookies-policy">cookies policy</a>
-          <a href="/legal-notice">legal notice</a>
-        </div>
-
-        <div>
-          <img src="/images/logos/ulabs.png" alt="Ulabs" />
-          <img src="/images/instagram_icon.png" alt="Instagram Icon" />
-        </div>
-      </footer>
     </>
   );
 };
