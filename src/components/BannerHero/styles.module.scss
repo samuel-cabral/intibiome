@@ -1,0 +1,14 @@
+.bannerContainer {
+  img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1120px) {
+  .bannerContainer {
+    img {
+      width: 100%;
+      min-width: 100vw;
+    }
+  }
+}
